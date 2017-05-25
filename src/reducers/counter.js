@@ -1,4 +1,4 @@
-import createReducer from '../lib/create-reducer';
+import { createReducer } from 'redux-create-reducer';
 import * as types from '../constants/actions-types';
 
 export default createReducer(0, {
