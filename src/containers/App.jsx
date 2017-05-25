@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="app-container">
-        <h1>react-redux-starter-kit</h1>
+        <h1>react-redux-webpack-starter-kit</h1>
         <Counter
           {...this.props}
         />
