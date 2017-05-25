@@ -1,8 +1,6 @@
 import * as types from '../constants/actions-types';
 
 const ActionCreators = {
-  // Action creators go here
-
   incrementCounter: () => ({
     type: types.INCREMENT_COUNTER,
   }),
