@@ -21,6 +21,6 @@
   },
   "scripts": {
     "start": "webpack-dev-server --content-base public/ --inline --hot --progress --colors",
-    "build": "webpack"
+    "build": "webpack -p"
   }
 }
