@@ -17,7 +17,7 @@ const SourceMapPlugin = new webpack.SourceMapDevToolPlugin({
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve('dist'),
+    path: path.resolve('build'),
     filename: 'app.js'
   },
   module: {
