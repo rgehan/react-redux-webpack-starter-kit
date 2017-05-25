@@ -1,10 +1,17 @@
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+// Create the html plugin
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './public/index.html',
   filename: 'index.html',
   inject: 'body'
+});
+
+// Create the source map plugin
+const SourceMapPlugin = new webpack.SourceMapDevToolPlugin({
+  filename: 'app.js.map',
 });
 
 module.exports = {
@@ -18,5 +25,8 @@ module.exports = {
       { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ }
     ]
   },
-  plugins: [HtmlWebpackPluginConfig]
+  plugins: [
+    SourceMapPlugin,
+    HtmlWebpackPluginConfig
+  ]
 }
