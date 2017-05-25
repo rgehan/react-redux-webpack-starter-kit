@@ -5,6 +5,8 @@ import { bindActionCreators } from 'redux';
 import ActionCreators from '../actions';
 import Counter from '../components/Counter.jsx';
 
+import '../styles/App.scss';
+
 class App extends Component {
   constructor() {
     super();
@@ -12,7 +14,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="app-container">
         <h1>react-redux-starter-kit</h1>
         <Counter
           {...this.props}
