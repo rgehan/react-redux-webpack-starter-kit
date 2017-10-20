@@ -22,17 +22,14 @@ npm run build # or yarn build
 ## File Structure
 ```
 .
-├── dist               # Build directory
-├── public             # Dev-server root folder
+├── dist                # Build directory
+├── public              # Dev-server root folder
 ├── src
-│   ├── actions        # Redux action creators
-│   ├── components     # React components
-│   ├── constants      # App constants (action types)
-│   ├── containers     # React containers
-│   ├── lib            # Various utilities
-│   ├── reducers       # All reducers files
-│   ├── styles         # SASS files
-│   └── index.js       # Entry point
+│   └── js
+│       ├── components  # React components (and their style)
+│       ├── containers  # React containers (and their style)
+│       ├── redux       # Reducers, action creators, redux related constants
+│       └── index.js    # Entry point
 │
 └── webpack.config.js  # Webpack configuration file
 ```
