@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import ActionCreators from '../actions';
-import Counter from '../components/Counter.jsx';
+import Counter from '../components/Counter';
+import { incrementCounter, decrementCounter } from '../redux/counter';
 
-import '../styles/App.scss';
+import './App.scss';
 
 class App extends Component {
   constructor() {
@@ -24,12 +24,9 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  counter: state.counter,
-});
-
-const mapDispatchToProps = dispatch => {
-  return bindActionCreators(ActionCreators, dispatch);
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(({ counter }) => ({
+  counter,
+}), (dispatch) => bindActionCreators({
+  incrementCounter,
+  decrementCounter
+}, dispatch))(App);
